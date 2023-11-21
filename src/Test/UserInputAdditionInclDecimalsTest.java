@@ -31,8 +31,16 @@ public class UserInputAdditionInclDecimalsTest {
 
         UserInputAdditionInclDecimals.main(new String[]{});
 
-        // Assert the output
         assertEquals("Input the first number: Input the second number: The added result of a and b is: 6.0\n", outContent.toString().replace("\r",""));
+    }
+
+    @Test
+    public void testAdditionWithNegativeDecimals() {
+        provideInput("-1.5\n-2.5\n");
+
+        UserInputAdditionInclDecimals.main(new String[]{});
+
+        assertEquals("Input the first number: Input the second number: The added result of a and b is: -4.0\n", outContent.toString().replace("\r",""));
     }
 
     private void provideInput(String data) {
