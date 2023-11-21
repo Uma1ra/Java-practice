@@ -4,9 +4,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserInputAdditionInclDecimals {
+  private static Scanner input = new Scanner(System.in);
   public static void main(String[] args) {
-    
-    Scanner input = new Scanner(System.in);
 
     try {
       System.out.print("Input the first number: ");
