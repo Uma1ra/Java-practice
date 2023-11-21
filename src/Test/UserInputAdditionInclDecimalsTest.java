@@ -32,7 +32,7 @@ public class UserInputAdditionInclDecimalsTest {
         UserInputAdditionInclDecimals.main(new String[]{});
 
         // Assert the output
-        assertEquals("Input the first number: Input the second number: The added result of a and b is: 6.0\n", outContent.toString());
+        assertEquals("Input the first number: Input the second number: The added result of a and b is: 6.0\n", outContent.toString().replace("\r",""));
     }
 
     private void provideInput(String data) {
