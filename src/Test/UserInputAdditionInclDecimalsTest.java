@@ -8,10 +8,10 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.InputMismatchException;
+// import java.util.InputMismatchException;
 
 public class UserInputAdditionInclDecimalsTest {
-  
+
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
 
@@ -23,5 +23,19 @@ public class UserInputAdditionInclDecimalsTest {
     @After
     public void restoreStreams() {
         System.setOut(originalOut);
+    }
+
+    @Test
+    public void testAdditionWithPositiveDecimals() {
+        provideInput("3.5\n2.5\n");
+
+        UserInputAdditionInclDecimals.main(new String[]{});
+
+        // Assert the output
+        assertEquals("Input the first number: Input the second number: The added result of a and b is: 6.0\n", outContent.toString());
+    }
+
+    private void provideInput(String data) {
+      System.setIn(new java.io.ByteArrayInputStream(data.getBytes()));
     }
 }
