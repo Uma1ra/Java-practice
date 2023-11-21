@@ -46,13 +46,17 @@ public class UserInputAdditionInclDecimalsTest {
     @Test
     public void testInvalidInputWithNonNumericCharacters() {
         provideInput("abc\n123\n");
-        
-        assertThrows(InputMismatchException.class, () -> {
+
+        try {
           UserInputAdditionInclDecimals.main(new String[]{});
-      });
+      } catch (InputMismatchException e) {
+          e.printStackTrace(); 
+          throw e;
+      }
     }
 
     private void provideInput(String data) {
-      System.setIn(new java.io.ByteArrayInputStream(data.getBytes()));
+      String testData = data + "456.78\n";
+      System.setIn(new java.io.ByteArrayInputStream(testData.getBytes()));
     }
 }

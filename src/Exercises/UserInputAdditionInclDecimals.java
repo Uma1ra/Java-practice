@@ -1,6 +1,7 @@
 package Exercises;
 
 import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class UserInputAdditionInclDecimals {
@@ -31,8 +32,12 @@ public class UserInputAdditionInclDecimals {
             return input.nextDouble();
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter a valid number.");
-            input.next();
+            input.nextLine();
+        } catch (NoSuchElementException e) {
+            System.out.println("No more input available.");
+            throw e;
         }
     }
   }
+
 }
