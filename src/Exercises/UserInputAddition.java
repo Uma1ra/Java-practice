@@ -16,5 +16,7 @@ public class UserInputAddition {
     int result = (a + b);
 
     System.out.println("The added result of a and b is: " + result);
+
+    input.close();
   }
 }
