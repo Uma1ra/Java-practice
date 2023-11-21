@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-// import java.util.InputMismatchException;
+import java.util.InputMismatchException;
 
 public class UserInputAdditionInclDecimalsTest {
 
@@ -41,6 +41,15 @@ public class UserInputAdditionInclDecimalsTest {
         UserInputAdditionInclDecimals.main(new String[]{});
 
         assertEquals("Input the first number: Input the second number: The added result of a and b is: -4.0\n", outContent.toString().replace("\r",""));
+    }
+
+    @Test
+    public void testInvalidInputWithNonNumericCharacters() {
+        provideInput("abc\n123\n");
+        
+        assertThrows(InputMismatchException.class, () -> {
+          UserInputAdditionInclDecimals.main(new String[]{});
+      });
     }
 
     private void provideInput(String data) {
