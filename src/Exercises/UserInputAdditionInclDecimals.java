@@ -34,5 +34,5 @@ public class UserInputAdditionInclDecimals {
             input.next();
         }
     }
-}
+  }
 }
