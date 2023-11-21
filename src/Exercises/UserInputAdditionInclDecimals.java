@@ -9,10 +9,10 @@ public class UserInputAdditionInclDecimals {
 
     try {
       System.out.print("Input the first number: ");
-      double a = input.nextDouble();
+      double a = readDouble();
 
       System.out.print("Input the second number: ");
-      double b = input.nextDouble();
+      double b = readDouble();
 
       double result = (a + b);
 
@@ -24,4 +24,15 @@ public class UserInputAdditionInclDecimals {
     }
     
   }
+
+  private static double readDouble() {
+    while (true) {
+        try {
+            return input.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter a valid number.");
+            input.next();
+        }
+    }
+}
 }
