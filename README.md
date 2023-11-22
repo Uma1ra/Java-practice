@@ -2,7 +2,7 @@
 
 独学で少しずつJavaのコードを書きながら学習中
 
-Exercises -> 関数などの練習重視
+Exercises -> 関数や概念の理解のため
 MiniProjects -> アプリらしい動きをするプチ実装
 
 
