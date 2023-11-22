@@ -53,7 +53,7 @@ public class Calculator {
         if (num2 != 0) {
           System.out.println("Result: " + (num1 / num2));
         } else {
-          System.out.println("Cannot divide by zero! Please enter a non-zero divisor");
+          System.out.println("Cannot divide by zero!");
         }
         break;
 
