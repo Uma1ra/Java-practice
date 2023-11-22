@@ -64,11 +64,11 @@ public class Calculator {
         break;
 
       case 4:
-        if (num2 != 0) {
-          System.out.println("Result: " + (num1 / num2));
-        } else {
-          System.out.println("Cannot divide by zero!");
+        while (num2 == 0) {
+          System.out.println("Enter the second number: ");
+          num2 = readDouble(scanner);
         }
+        System.out.println("Result: " + (num1 / num2));
         break;
 
       case 5:
