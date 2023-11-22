@@ -27,7 +27,10 @@ public class Calculator {
 
     int userChoice;
     do {
-      calculator.displayMenu();
+      try {
+        calculator.displayMenu();
+      }
+      
 
 
     }
