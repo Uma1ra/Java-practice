@@ -30,6 +30,39 @@ public class Calculator {
         System.out.println("Enter the second number: ");
         num2 = scanner.nextDouble();
       }
+    } catch (InputMismatchException e) {
+      System.out.println("Invalid input. Please enter valid numbers.");
+      scanner.nextLine();
+      return;
+    }
+
+    switch (userChoice) {
+      case 1:
+        System.out.println("Result: " + (num1 + num2));
+        break;
+
+      case 2:
+        System.out.println("Result: " + (num1 - num2));
+        break;
+
+      case 3:
+        System.out.println("Result: " + (num1 * num2));
+        break;
+
+      case 4:
+        if (num2 != 0) {
+          System.out.println("Result: " + (num1 / num2));
+        } else {
+          System.out.println("Cannot divide by zero! Please enter a non-zero divisor");
+        }
+        break;
+
+      case 5:
+        System.out.println("Exiting program...");
+        break;
+
+      default:
+        System.out.println("Invalid choice.");
     }
   }
 
