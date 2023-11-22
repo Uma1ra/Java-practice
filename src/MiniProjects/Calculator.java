@@ -21,6 +21,16 @@ public class Calculator {
 
   public void performOperation(int userChoice) {
     double num1 = 0, num2 = 0;
+
+    try {
+      if (userChoice >= 1 && userChoice <= 4) {
+        System.out.println("Enter the first number: ");
+        num1 = scanner.nextDouble();
+
+        System.out.println("Enter the second number: ");
+        num2 = scanner.nextDouble();
+      }
+    }
   }
 
   public static void main(String[] args) {
