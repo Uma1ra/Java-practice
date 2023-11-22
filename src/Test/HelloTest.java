@@ -1,8 +1,8 @@
 package Test;
 
-import Main.Hello;
-
 import org.junit.Test;
+
+import Sample.Hello;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

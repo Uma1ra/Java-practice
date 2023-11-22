@@ -1,4 +1,4 @@
-package Main;
+package Sample;
 
 public class Hello {
   public static void main(String[] args) {
