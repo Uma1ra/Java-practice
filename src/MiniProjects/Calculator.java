@@ -2,6 +2,7 @@ package MiniProjects;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 
 public class Calculator {
   private Scanner scanner;
@@ -19,21 +20,34 @@ public class Calculator {
     System.out.println("5. Exit");
   }
 
+  private static double readDouble(Scanner scanner) {
+    while (true) {
+      try {
+        return scanner.nextDouble();
+      } catch (InputMismatchException e) {
+        System.out.println("Invalid input. Please enter a valid number.");
+        scanner.nextLine(); // Consume the invalid input
+      } catch (NoSuchElementException e) {
+        System.out.println("No more input available.");
+        throw e;
+      }
+    }
+  }
+
   public void performOperation(int userChoice) {
     double num1 = 0, num2 = 0;
 
     try {
       if (userChoice >= 1 && userChoice <= 4) {
         System.out.println("Enter the first number: ");
-        num1 = scanner.nextDouble();
+        num1 = readDouble(scanner);
 
         System.out.println("Enter the second number: ");
-        num2 = scanner.nextDouble();
+        num2 = readDouble(scanner);
       }
     } catch (InputMismatchException e) {
       System.out.println("Invalid input. Please enter valid numbers.");
       scanner.nextLine();
-      return;
     }
 
     switch (userChoice) {
