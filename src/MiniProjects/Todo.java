@@ -8,6 +8,31 @@ public class Todo {
 
     while (true) {
       displayMenu();
+      int choice = getUserChoice();
+
+      switch (choice) {
+
+        case 1:
+          displayTasks();
+          break;
+
+        // case 2:
+        //   addTasks();
+        //   break;
+        
+        // case 3:
+        //   markTaskAsCompleted();
+        //   break;
+        
+        // case 4:
+        //   saveTasksToFile();
+        //   System.out.println("Tasks saved. Exiting program.");
+        //   System.exit(0);
+          
+        // default:
+        // System.out.println("Invalid choice. Please try again.");
+
+      }
     }
   }
 
