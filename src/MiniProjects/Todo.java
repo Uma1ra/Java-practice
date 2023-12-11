@@ -20,4 +20,10 @@ public class Todo {
     System.out.println("3. Mark a task as completed");
     System.out.println("4. Save and Exit");
   }
+
+  private static int getUserChoice() {
+    System.out.println("Enter your choice: ");
+    Scanner scanner = new Scanner(System.in);
+    return scanner.nextInt();
+  }
 }
