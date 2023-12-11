@@ -1,5 +1,7 @@
 package MiniProjects;
 
+import java.util.Scanner;
+
 public class Todo {
   public static void main(String[] args) {
     // loadTasks();
@@ -22,8 +24,9 @@ public class Todo {
   }
 
   private static int getUserChoice() {
-    System.out.println("Enter your choice: ");
-    Scanner scanner = new Scanner(System.in);
+    try (Scanner scanner = new Scanner(System.in)) {
+      System.out.println("Enter your choice: ");
     return scanner.nextInt();
+    }
   }
 }
